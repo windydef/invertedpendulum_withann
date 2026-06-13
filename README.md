@@ -111,85 +111,6 @@ The simulation uses the Runge-Kutta numerical integration method to solve the no
 
 ---
 
-## Simulation Parameters
-
-Default simulation parameters:
-
-| Parameter         | Value |
-| ----------------- | ----- |
-| Pendulum Length   | 2 m   |
-| Object Mass       | 1 kg  |
-| Initial Angle (θ) | 0°    |
-| Alpha             | 10    |
-| Gain              | 2     |
-
-Where:
-
-* **Alpha** is used as a parameter within the ANN.
-* **Gain** amplifies the force applied to the cart.
-
----
-
-## Experimental Results
-
-### Without PID Control
-
-The pendulum falls due to gravity and eventually reaches a stable downward position.
-
-Observations:
-
-* No balancing capability
-* Large steady-state error
-* High iteration count before stabilization
-
-### With PID Control
-
-The pendulum is successfully balanced around the upright position.
-
-Observations:
-
-* Faster stabilization
-* Reduced error
-* Smaller control force over time
-* Improved system performance
-
-For an initial angle of 15°:
-
-| Mode        | Iterations to Steady State |
-| ----------- | -------------------------- |
-| Without PID | 2762                       |
-| With PID    | 267                        |
-
-For larger initial angles, the controller requires more corrective force but still stabilizes the pendulum effectively.
-
----
-
-## Parameter Analysis
-
-The report evaluates several system parameters:
-
-### Pendulum Length
-
-Increasing pendulum length increases the time required to reach steady state.
-
-### Object Mass
-
-Larger masses require longer stabilization times.
-
-### Pendulum Mass
-
-Changes in pendulum mass affect system dynamics and convergence speed.
-
-### Alpha
-
-Higher alpha values improve convergence and reduce stabilization time.
-
-### Gain
-
-Higher gain values improve response speed and reduce settling time.
-
----
-
 ## Technologies Used
 
 | Technology                | Description             |
@@ -223,32 +144,10 @@ InvertedPendulumANN/
 
 ---
 
-## Learning Objectives
-
-This project demonstrates:
-
-* Artificial Neural Networks (ANN)
-* Multi-Layer Perceptron (MLP)
-* Backpropagation Learning
-* PID Control Systems
-* Dynamic System Modeling
-* Runge-Kutta Numerical Methods
-* Inverted Pendulum Stabilization
-* Intelligent Control Systems
-
----
-
-## Reference
-
-The complete theoretical derivation, implementation details, and experimental results are documented in:
-
-**Report_INVERTED_PENDULUM_WITH_ANN.pdf**
-
----
-
 ## Author
 
 **Windy Deftia M**
+
 Created in 2018
 
 Biomedical Engineering
